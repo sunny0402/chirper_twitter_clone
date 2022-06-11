@@ -6,8 +6,8 @@ Most of the commits in this repository correspond to videos in the program.
 
 ## Project Setup
 
-* clone the Project - `git@github.com:udacity/reactnd-chirper-app.git`
-* install the dependencies - `npm install`
+- clone the Project - `git@github.com:udacity/reactnd-chirper-app.git`
+- install the dependencies - `npm install`
 
 ## Contributing
 
@@ -18,3 +18,7 @@ If you feel like there's a major problem, please open an issue to discuss the pr
 ## License
 
 MIT
+
+## Notes
+
+yarn upgrade react react-dom
