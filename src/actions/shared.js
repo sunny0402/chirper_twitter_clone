@@ -1,7 +1,7 @@
 import { getInitialData } from "../utils/api";
-import { receiveUsers } from "./actions/users";
-import { receiveTweets } from "./actions/tweets";
-import { setAuthedUser } from "./actions/authedUser";
+import { receiveUsers } from "./users";
+import { receiveTweets } from "./tweets";
+import { setAuthedUser } from "./authedUser";
 
 const AUTHED_ID = "tylermcginnis";
 
