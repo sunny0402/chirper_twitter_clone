@@ -19,7 +19,7 @@ class Tweet extends Component {
     const { tweet } = this.props;
 
     if (tweet === null) {
-      return <p>This Tweet doesn't existd</p>;
+      return <p>This Tweet doesn't exist</p>;
     }
 
     const { name, avatar, timestamp, text, hasLiked, likes, replies, parent } =
@@ -59,7 +59,9 @@ class Tweet extends Component {
     );
   }
 }
-
+// mapStateToProps(state, [ownProps])
+// from store: authedUser, users, tweets
+// from parent component (Dashboard): id
 function mapStateToProps({ authedUser, users, tweets }, { id }) {
   const tweet = tweets[id];
   const parentTweet = tweet ? tweets[tweet.replyingTo] : null;

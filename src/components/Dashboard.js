@@ -28,3 +28,17 @@ function mapStateToProps({ tweets }) {
 }
 
 export default connect(mapStateToProps)(Dashboard);
+
+/* 
+App State:
+{
+  tweets: {
+    tweetId: { tweet id, author’s id, timestamp, text, likes, replies, replyingTo},
+    tweetId: { tweet id, author’s id, timestamp, text, likes, replies, replyingTo}
+  },
+  users: {
+    userId: {user’s id, user’s name, avatar, tweets array},
+    userId: {user’s id, user’s name, avatar, tweets array}
+  }
+}
+**/
