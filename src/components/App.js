@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { handleInitialData } from "../actions/shared";
 import Dashboard from "./Dashboard";
 import LoadingBar from "react-redux-loading";
+import NewTweet from "./NewTweet";
+
 /*
 I lost about 1 hour because I was importing LoadingBar instead of default.
 It's hard to detect the bug because LoadingBar exists too:
@@ -22,7 +24,7 @@ class App extends Component {
     return (
       <div>
         <LoadingBar />
-        {this.props.loading === true ? null : <Dashboard />}
+        {this.props.loading === true ? null : <NewTweet />}
       </div>
     );
   }
