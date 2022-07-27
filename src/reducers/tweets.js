@@ -58,18 +58,46 @@ export default function tweets(state = {}, action) {
           [tweet.replyingTo]: {
             // update the tweet that is being replied to
             // this is tweets reducer, so ...state updates the tweet part of state
+
+            //merge old state with new replies array
             ...state[tweet.replyingTo],
             replies: state[tweet.replyingTo].replies.concat([tweet.id]),
           },
         };
       }
-
       return {
         ...state,
         // add new tweet to the tweet slice of state
         [action.tweet.id]: action.tweet,
         ...replyingTo,
       };
+
+    // Doesn't work
+    // here allReplies simply concats the new reply to end of array
+    //above allReplies is:
+    // ...state[tweet.replyingTo],
+    // replies: state[tweet.replyingTo].replies.concat([tweet.id]),
+
+    // case ADD_TWEET :
+    //   const { tweet } = action
+
+    //   let replyingTo = {}
+    //   if (tweet.replyingTo !== null) {
+    //   const allReplies = state[tweet.replyingTo].replies.concat([tweet.id]);
+
+    //         return {
+    //         ...state,
+    //         [action.tweet.id]: action.tweet,
+    //         [action.tweet.replyingTo.replies]: allReplies
+    //         }
+
+    //   }
+
+    //   return {
+    //   ...state,
+    //   [action.tweet.id]: action.tweet,
+    //   ...replyingTo,
+    //   }
 
     default:
       return state;
